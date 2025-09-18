@@ -1,4 +1,11 @@
-   body {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Goal Widget</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
       background: #fff;
       font-family: 'Courier New', monospace;
       color: #000;
@@ -49,3 +56,25 @@
       transform: translate(2px, 2px);
       box-shadow: 2px 2px 0 #000;
     }
+  </style>
+</head>
+<body>
+  <h1>Current Goal</h1>
+
+  <div class="countdown-box" id="countdownBox">
+    <h2 id="goalTitle">No goal set</h2>
+    <p id="goalDate">—</p>
+    <p id="daysLeft">—</p>
+  </div>
+
+  <div class="edit-panel">
+    <input type="text" id="goalName" placeholder="Goal name">
+    <input type="date" id="goalDeadline">
+    <button onclick="setGoal()">Set Goal</button>
+    <button onclick="clearGoal()">Clear Goal</button>
+    <button onclick="refreshGoal()">Refresh Day</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
