@@ -1,80 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Goal Widget</title>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    body {
-      background: #fff;
-      font-family: 'Courier New', monospace;
-      color: #000;
-      padding: 2rem;
-    }
+body {
+  background: #fff;
+  font-family: 'Courier New', monospace;
+  color: #000;
+  padding: 2rem;
+}
 
-    h1 {
-      text-transform: uppercase;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
+h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 
-    .countdown-box {
-      border: 2px solid #000;
-      box-shadow: 6px 6px 0 #000;
-      padding: 1rem;
-      max-width: 400px;
-      margin: 0 auto 2rem auto;
-      text-align: center;
-    }
+.countdown-box {
+  border: 2px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  padding: 1rem;
+  max-width: 400px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
 
-    .countdown-box h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
+.countdown-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
 
-    .countdown-box p {
-      font-size: 1.25rem;
-      margin: 0.5rem 0;
-    }
+.countdown-box p {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
 
-    .edit-panel {
-      text-align: center;
-    }
-
-    input, button {
-      margin: 0.5rem;
-      padding: 0.5rem;
-      border: 2px solid #000;
-      box-shadow: 4px 4px 0 #000;
-      background: #fff;
-      font-family: inherit;
-      font-weight: bold;
-    }
-
-    button:active {
-      transform: translate(2px, 2px);
-      box-shadow: 2px 2px 0 #000;
-    }
-  </style>
-</head>
-<body>
-  <h1>Current Goal</h1>
-
-  <div class="countdown-box" id="countdownBox">
-    <h2 id="goalTitle">No goal set</h2>
-    <p id="goalDate">—</p>
-    <p id="daysLeft">—</p>
-  </div>
-
-  <div class="edit-panel">
-    <input type="text" id="goalName" placeholder="Goal name">
-    <input type="date" id="goalDeadline">
-    <button onclick="setGoal()">Set Goal</button>
-    <button onclick="clearGoal()">Clear Goal</button>
-    <button onclick="refreshGoal()">Refresh Day</button>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+.edit-panel {
+  text-align
