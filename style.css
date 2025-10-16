@@ -5,6 +5,14 @@ body {
   padding: 2rem;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 h1 {
   text-transform: uppercase;
   font-size: 2rem;
