@@ -6,20 +6,25 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>Current Goal</h1>
+  <h1 id="mainHeading">Current Goal</h1>
 
-  <div class="countdown-box" id="countdownBox">
+  <div class="countdown-box" id="countdownBox" role="region" aria-labelledby="goalTitle" aria-describedby="goalDate daysLeft">
     <h2 id="goalTitle">No goal set</h2>
     <p id="goalDate">—</p>
     <p id="daysLeft">—</p>
   </div>
 
-  <div class="edit-panel">
-    <input type="text" id="goalName" placeholder="Goal name">
-    <input type="date" id="goalDeadline">
-    <button onclick="setGoal()">Set Goal</button>
-    <button onclick="clearGoal()">Clear Goal</button>
-    <button onclick="refreshGoal()">Refresh Day</button>
+  <div class="edit-panel" role="form" aria-labelledby="formHeading">
+    <h2 id="formHeading" class="visually-hidden">Set or update your goal</h2>
+    <label for="goalName" class="visually-hidden">Goal name</label>
+    <input type="text" id="goalName" placeholder="Goal name" aria-label="Goal name">
+
+    <label for="goalDeadline" class="visually-hidden">Goal deadline</label>
+    <input type="date" id="goalDeadline" aria-label="Goal deadline">
+
+    <button onclick="setGoal()" aria-label="Set goal with entered name and deadline">Set Goal</button>
+    <button onclick="clearGoal()" aria-label="Clear current goal">Clear Goal</button>
+    <button onclick="refreshGoal()" aria-label="Refresh remaining days for current goal">Refresh Day</button>
   </div>
 
   <script src="script.js"></script>
